@@ -1,0 +1,182 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.ConnectButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.connect:hover {
+  background-color: #005bb5;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: url('/Img/bg3.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110% auto;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.circleButton {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s ease;
+  display: block;
+  position: absolute;
+  background-color: transparent;
+}
+
+.lock {
+  background-image: url("/Img/lock.png");
+  background-color: transparent;
+  cursor: default;
+}
+
+.circleButton:hover {
+  opacity: 0.85;
+}
+
+.circleButton:active {
+  opacity: 0.7;
+}
+
+.circleButton:disabled {
+  cursor: default;
+}
+
+.crab {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.spot {
+  position: absolute;
+}
+
+.spot1 {
+  top: 90%;
+  left: 28.7%;
+}
+
+.spot2 {
+  top: 54%;
+  left: 18%;
+}
+
+.spot3 {
+  top: 54%;
+  left: 38%;
+}
+
+.spot4 {
+  top: 22%;
+  left: 43.5%;
+}
+
+.spot5 {
+  top: 67%;
+  left: 50%;
+}
+
+.spot6 {
+  top: 54%;
+  right: 37.5%;
+}
+
+.spot7 {
+  top: 54%;
+  right: 18.5%;
+}
+
+.spot8 {
+  top: 88%;
+  right: 14%;
+}
+
+@keyframes walkPath1 {
+  0% {
+    transform: translate(0, -60px);
+  }
+  100% {
+    transform: translate(0, -60px); /* Stay in the same place initially */
+  }
+}
+
+@keyframes walkPath2 {
+  0% {
+    transform: translate(165px, 210px);
+  }
+  30% {
+    transform: translate(165px, 128px);
+  }
+  60% {
+    transform: translate(0px, 128px);
+  }
+}
+
+@keyframes walkPath3 {
+  0% {
+    transform: translate(-305px, 0px);
+  }
+  25% {
+    transform: translate(-310px, 128px);
+  }
+  50% {
+    transform: translate(-150px, 128px);
+  }
+  75% {
+    transform: translate(-150px, 20px);
+  }
+  90% {
+    transform: translate(0px, 20px);
+  }
+}
+
+/* Define the animation classes for each path */
+
+.walkPath1 {
+  animation: walkPath1 0s forwards; /* Initially place the crab at button 1 */
+}
+
+.walkPath2 {
+  animation: walkPath2 4s forwards;
+}
+
+.walkPath3 {
+  animation: walkPath3 4s forwards;
+}
+

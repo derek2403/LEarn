@@ -1,0 +1,18 @@
+/* Loader.module.css */
+@keyframes pixelated-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    width: 100px; /* Increase loader size */
+    height: 100px;
+    background-color: #3498db; /* Blue color for the loader */
+    position: relative;
+    animation: pixelated-spin 1.2s steps(8) infinite; /* Pixelated spinning effect */
+    image-rendering: pixelated; /* Make the loader pixelated */
+}

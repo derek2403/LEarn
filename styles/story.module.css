@@ -1,0 +1,94 @@
+.story-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4; 
+}
+
+.story-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.story-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #000;
+  animation: moveBackground 5s infinite alternate, zoomBackground 5s infinite alternate;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes zoomBackground {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.story-text-box {
+  position: absolute;
+  bottom: 30px;
+  width: 1000px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-frame {
+  background-color: rgba(45, 45, 45, 0.8);
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 950px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.story-frame h2 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  gap: 700px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  font-size: 10px;
+  background-color: rgba(45, 45, 45, 0.8);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
